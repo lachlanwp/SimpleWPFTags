@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="TagsControl.IndividualTag"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TagsControl"
+             mc:Ignorable="d" 
+             d:DesignHeight="20" x:Name="IndividualTagControl">
+    <Grid>
+        <Border Background="LightBlue" BorderBrush="Navy" BorderThickness="1,1,1,1" Height="20" CornerRadius="5" Margin="5,0,0,0" Padding="0,0,5,0">
+            <StackPanel Orientation="Horizontal">
+                <Label Name="TagString" Padding="5,0" Content="{Binding TagStringValue, ElementName=IndividualTagControl}"></Label>
+                <Button Width="13" Height="13" Name="DeleteTagBtn" Click="DeleteTagBtn_Click" Background="Transparent" BorderThickness="0">
+                    <Image  Source="close-icon.png"></Image>
+                </Button>
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>
